@@ -14,19 +14,22 @@ class MainActivity : AppCompatActivity() {
         //Criar uma variavel e associar(=) o compenente de UI<>EditText
         //Recuperar o botao de tela
         //Colocare acao no botao setOnClickListener
-        //Recuperar o texto digitado ono edt peso
+        //Recuperar o texto digitado no edt peso
 
-        val edtPeso= findViewById<TextInputEditText>(R.id.edt_peso)
-        val edtAltura= findViewById<TextInputEditText>(R.id.edt_altura)
+        val edtPeso = findViewById<TextInputEditText>(R.id.edt_peso)
+        val edtAltura = findViewById<TextInputEditText>(R.id.edt_altura)
 
         val btnCalcular = findViewById<Button>(R.id.btn_calcular)
 
         btnCalcular.setOnClickListener {
-            val peso= edtPeso.text
-            val altura = edtAltura.text
-            println("luis acao do botao" + altura)
-        }
+            val peso : Float = edtPeso.text.toString().toFloat()
+            val altura : Float =  edtAltura.text.toString().toFloat()
 
+            val alturaQ2 = altura * altura
+            val resultado = peso/ alturaQ2
+            println("Luis acao do botao " +resultado)
+
+        }
 
     }
 }
