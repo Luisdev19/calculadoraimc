@@ -12,12 +12,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //Recuperar os componentes EditText
-        //Criar uma variavel e associar(=) o compenente de UI<>EditText
-        //Recuperar o botao de tela
-        //Colocare acao no botao setOnClickListener
-        //Recuperar o texto digitado no edt peso
-
         val edtPeso = findViewById<TextInputEditText>(R.id.edt_peso)
         val edtAltura = findViewById<TextInputEditText>(R.id.edt_altura)
 
@@ -30,7 +24,6 @@ class MainActivity : AppCompatActivity() {
             val alturaStr : String =  edtAltura.text.toString()
 
             if(pesoStr == ""|| alturaStr == "") {
-                    //Mostrar mensagem para o usuario
                 Snackbar.make(
                         edtPeso,
                         "Preencha todos os campos",
@@ -50,11 +43,6 @@ class MainActivity : AppCompatActivity() {
 
 
                 println("Luis acao do botao " +resultado)
-
-                //Cores
-                //EditText background + Icone
-                // Gradiente + icone + descricao
-
 
 
             }
